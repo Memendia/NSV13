@@ -31,6 +31,18 @@
 	max_charge = 8000000 // Store 2 charges
 	power_modifier_cap = 5 //Allows you to do insanely powerful oneshot lasers. Maximum theoretical damage of 500.
 
+
+/obj/machinery/ship_weapon/energy/beam/low_power
+	name = "phase cannon"
+	desc = "An extremely mediocre directed energy weapon which is capable of delivering an above average beam attack."
+	icon_state = "ion_cannon"
+	fire_mode = FIRE_MODE_BLUE_LASER
+	energy_weapon_type = /datum/ship_weapon/phaser
+	charge_rate = 200000 // At Max Power, requires 0.3MW per tick to charge
+	charge_per_shot = 1000000 // At Max powerlevel, requires 1MW total to fire, takes about 10 seconds to gain 1 charge
+	max_charge = 4000000 // Store 4 charges
+	power_modifier_cap = 1.5 //Capped so you dont just steamroll everything you come across
+
 /obj/machinery/ship_weapon/energy/lazyload()
 	active = TRUE
 	power_modifier = 1
